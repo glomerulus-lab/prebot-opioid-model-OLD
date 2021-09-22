@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# edit this for new batch of runs
+mkdir damgo_ramp_pkls/batch2_pkls
+mkdir damgo_ramp_figs/batch2_figs
+
+for i in {1..40}
+    do
+        python run_damgo_ramp.py seed$i-damgo_ramp --run_seed $i 
+    done
+
+python damgo_ramp_postproc.py 1 40
+python plot_max_fr_ld50.py 1 40
+python create_graphs.py 1 40

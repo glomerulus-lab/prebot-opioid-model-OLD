@@ -1,0 +1,14 @@
+#!/bin/bash
+
+for i in {1..40}
+    do
+        python run_synblock.py seed$i-control_grid --run_seed $i --struct grid
+        python run_synblock.py seed$i-damgo_grid --run_seed $i --condition DAMGO
+        python run_synblock.py seed$i-gnap01_grid --run_seed $i --g_nap_str 0.1 --condition G_NaP --struct grid
+        python run_synblock.py seed$i-damgo_gnap01_grid --run_seed $i --g_nap_str 0.1 --condition DAMGO+G_NaP --struct grid
+        python run_synblock.py seed$i-gnap03_grid --run_seed $i --g_nap_str 0.3 --condition G_NaP --struct grid
+        python run_synblock.py seed$i-damgo_gnap03_grid --run_seed $i --g_nap_str 0.3 --condition DAMGO+G_NaP --struct grid
+        python run_synblock.py seed$i-gnap05_grid --run_seed $i --g_nap_str 0.5 --condition G_NaP --struct grids
+        python run_synblock.py seed$i-damgo_gnap05_grid --run_seed $i --g_nap_str 0.5 --condition DAMGO+G_NaP --struct grid
+    done
+

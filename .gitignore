@@ -1,0 +1,12 @@
+*.h
+*.o
+*.exe
+*.log
+.idea/
+.DS_Store
+**/0000/
+gnap_mod_sim/gnap_mod_pkls/
+damgo_ramp_sim/damgo_ramp_pkls/
+synblock_sim/synblock_pkls/
+__pycache__
+.ipynb_checkpoints
